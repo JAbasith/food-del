@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import './PlaceOrder.css'
+import './placeOrder.css'
 
 const PlaceOrder = () => {
   return (
@@ -8,6 +9,5 @@ const PlaceOrder = () => {
     </div>
   )
 }
-import './PlaceOrder.css'
 
 export default PlaceOrder
