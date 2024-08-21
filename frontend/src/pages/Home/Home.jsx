@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
@@ -19,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
