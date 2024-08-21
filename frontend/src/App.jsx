@@ -1,24 +1,33 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import { Routes,Route } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react'
+import Navbar from './components/Navbar/navbar'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
+import LoginPopup  from './components/LoginPopup/LoginPopup'
 
 const App = () => {
+
+  //set initial value as a false 
+  const [showLogin, setShowLogin] = useState(false)
+
   return (
     <>
+    {/* if else statement */}
+    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
       <div className='app'>
-        <Navbar />
+        <Navbar setShowLogin={setShowLogin}/>
         <Routes>
-          <Route path= '/' element={<Home />} />
-          <Route path= '/cart' elememt={<Cart />} />
-          <Route path = '/order' element={<PlaceOrder/>} />
+          < Route path='/' element={<Home/>}/>
+          < Route path='/cart' element={<Cart/>}/>
+          < Route path='/order' element={<PlaceOrder/>}/>
         </Routes>
       </div>
       <Footer/>
     </>
+
   )
 }
 
