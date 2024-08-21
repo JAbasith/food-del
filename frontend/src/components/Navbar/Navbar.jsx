@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
-import './navbar.css'
+import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 
