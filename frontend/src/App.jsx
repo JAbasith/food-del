@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
-import Navbar from './component/Navbar/navbar'
+import Navbar from './components/Navbar/navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
-import Footer from './component/Footer/Footer'
-import LoginPopup  from './component/LoginPopup/LoginPopup'
+import Footer from './components/Footer/Footer'
+import LoginPopup  from './components/LoginPopup/LoginPopup'
 
 const App = () => {
 
