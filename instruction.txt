@@ -1,0 +1,12 @@
+Run project:
+    FE - npm run dev
+    BE - npm start server
+
+
+
+front end :
+    npm install axios
+
+
+
+somethimes backend not work after sync with GIT therefore we need to re install 'npm install nodemon'
