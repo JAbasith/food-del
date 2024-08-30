@@ -76,8 +76,8 @@ const LoginPopup = ({setShowLogin}) => {
                 :<p>Already have an accoun? <span onClick={()=>setCurrState("Login")}>Login here</span></p>
                 }
             </form>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default LoginPopup
