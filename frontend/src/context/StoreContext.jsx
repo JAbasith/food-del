@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { createContext } from "react";
 import { food_list } from "../assets/assets";
 
@@ -7,6 +7,8 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
     
     const [cartItems, setCartItems] = React.useState({});
+    const url = "http://localhost:4000";
+    const [token,setToken] = useState("");
 
     const addToCart = (itemId) => {
         //create new entry if this food id not available in 
@@ -32,7 +34,10 @@ const StoreContextProvider = (props) => {
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart        
+        removeFromCart,
+        url,
+        token,
+        setToken
     }
 
     return (
