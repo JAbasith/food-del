@@ -6,7 +6,7 @@ import { StoreContext } from '../../context/StoreContext'
 
 const Cart = () => {
 
-  const {cartItems, food_list, removeFromCart} = useContext(StoreContext);
+  const {cartItems, food_list, removeFromCart, getTotalCartAmount} = useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -56,12 +56,18 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery fee</p>
+
               <p>${getTotalCartAmount()===0?0:2}</p>
+
+              <p>${2}</p>
+
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
+
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+
             </div>
           </div>
           <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
@@ -75,7 +81,7 @@ const Cart = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   )
 }
