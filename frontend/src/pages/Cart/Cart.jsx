@@ -3,6 +3,7 @@ import './Cart.css'
 import { useCallback } from 'react'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
 
