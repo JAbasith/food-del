@@ -42,9 +42,11 @@ const LoginPopup = ({setShowLogin}) => {
 
         const response = await axios.post(newUrl,data);
         
+        //this means we are log on registered
         if (response.data.success) {
             setToken(response.data.token);
             localStorage.setItem("token", response.data.token)
+            //login page will be hidden
             setShowLogin(false)
         }
         else {
@@ -62,9 +64,9 @@ const LoginPopup = ({setShowLogin}) => {
                 </div>
                 <div className="login-popup-inputs">
                     {/* if current state is login then not show name if not ask to input namee */}
-                    {currState==="Login"?<></>:<input name="name" onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required />}
-                    <input name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder='Your email' required />
-                    <input name="password" onChange={onChangeHandler} value={data.password} type="password" placeholder='Password' required />
+                    {currState==="Login"?<></>:<input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required />}
+                    <input name='email' onChange={onChangeHandler} value={data.email} type="email" placeholder='Your email' required />
+                    <input name='password' onChange={onChangeHandler} value={data.password} type="password" placeholder='Password' required />
                 </div>
                 <button type="submit">{currState==="Sign Up"?"Create account":"Login"}</button>
                 <div className="login-popup-condition">

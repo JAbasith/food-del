@@ -18,10 +18,12 @@ connectDB();
 
 // api endpoints
 app.use("/api/food",foodRouter)
-app.use("/api/user", userRouter)
 
 //that we can access any photo witth using this /images
 app.use("/images",express.static('uploads'))
+
+app.use("/api/user", userRouter)
+
 
 app.get("/",(req,res)=>{
     res.send("API Working")
