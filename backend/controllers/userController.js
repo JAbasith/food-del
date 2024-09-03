@@ -8,6 +8,7 @@ import { response } from "express";
 const loginUser = async (req,res) => {
     const {email,password} = req.body;
     try {
+        //if acc available then it saves into user
         const user = await userModel.findOne({email});
 
         if (!user) {
@@ -21,6 +22,7 @@ const loginUser = async (req,res) => {
         }
 
         const token = createToken(user._id);
+        //send token as a response
         res.json({success:true, token})
 
     } catch (error) {
@@ -64,6 +66,7 @@ const registerUser = async (req,res) => {
         })
 
         const user = await newUser.save()
+        //after creating user generate token
         const token = createToken(user._id)
         res.json({success:true,token});
 
