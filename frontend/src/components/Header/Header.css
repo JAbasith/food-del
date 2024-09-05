@@ -5,6 +5,7 @@
     background-size: contain;
     position: relative;
     animation: fadeIn 3s ;
+    border-radius: 50px;
 }
 
 .header-contents{
@@ -23,6 +24,10 @@
     color: white;
     font-size: max(4.5vw, 22px);
 }
+.header-contents h3{
+    font-weight: 500;
+    color: white;
+}
 
 .header-contents p {
     color: white;
@@ -38,6 +43,14 @@
     font-size: max(1vw, 13px);
     border-radius: 50px;
     border: none;
+    cursor: pointer;
+}
+
+.header-contents button:hover {
+    transform:scale3d(1.1,1.1,1.1);
+    transition: all 1s;
+    background-color: rgb(255, 1, 1);
+    color:white;
 }
 
 @keyframes fadeIn {
