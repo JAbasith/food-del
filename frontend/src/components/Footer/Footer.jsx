@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-content-left">
                 <img src={assets.logo} alt="" />
                 <p>
-                    abcd afjkafkjk akfn kfnalfnla nffla lfnla fnalfnalfnlfl nnlafn lafanfl afnla flafnl af
+                Satisfy Your Hunger – Fast, Fresh, and Delivered to Your Doorstep!"
                 </p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="facebook icon" />
@@ -31,12 +31,12 @@ const Footer = () => {
               <h2>GET IN TOUCH</h2>
               <ul>
                 <li>+94 34 567 323</li>
-                <li>contact@tamoto.com</li>
+                <li>contact@vitoskitchen.com</li>
               </ul>
             </div>
         </div>
         <hr />
-        <p className="footer-copyright">Copyright 2024 @ tomato.com - All Right Reserved.</p>
+        <p className="footer-copyright">Copyright 2024 @ vitoskitchen.com - All Right Reserved.</p>
     </div>
   )
 }
